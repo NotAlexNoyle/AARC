@@ -1,4 +1,4 @@
-package AARC;
+package notalexnoyle;
 
 // Import color library for text formatting
 import java.awt.Color;
