@@ -15,7 +15,8 @@ Known Bugs:
 
 TODO:
 
-- Ensure .jar file is executable
+- Toggle switch for dark mode 
+- Add dark mode in error messages
 - Sort out directory tree (more)
 - AARC.jar //TODO(s)
 
