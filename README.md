@@ -8,16 +8,15 @@ Changelog:
 - Version 0.2 Alpha - Bugfix: Crash when entering non-integer characters
 - Version 0.1 Alpha - Initial Release
 
-
 Known Bugs:
 - UI elements can be misaligned
-- Negative number checks do not exist yet
+- Negative number check logic needs a fix --> more info in /src/notalexnoyle/AARC.jar
 
 TODO:
 
 - Toggle switch for dark mode 
 - Add dark mode in error messages
-- AARC.jar //TODO(s)
+- Come up with a way to auto-merge AARC.jar //TODO(s) into readme
 
 Screenshots:
 

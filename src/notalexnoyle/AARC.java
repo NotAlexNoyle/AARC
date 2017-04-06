@@ -1,4 +1,5 @@
 package notalexnoyle;
+//TODO: Add Icon to .jar?
 
 // Import color library for text formatting
 import java.awt.Color;
@@ -33,7 +34,7 @@ public class AARC {
 	public static void main(String[] args) {
 		
 		// Declare panel to hold frame / set layout / set style
-		// TODO: Revise UI - consider switching layout to something which allows more precise alignment, while still allowing the user to move around window.
+		// TODO: Revise UI - consider switching layout to something which allows more precise alignment, while still allowing the user to modify window attributes --> scale UI elements?
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
 		
@@ -133,12 +134,10 @@ public class AARC {
 		public void actionPerformed(ActionEvent event) {
 
 			// Input validation logic
-			// TODO: Make input validation logic reject negative numbers
-			
-			// Booleans keep track of input validation errors
+			// Booleans to keep track of input validation errors. Specifically, whether or not the user entered width/height are valid numbers.
 			boolean widthIsBad = false;
 			boolean heightIsBad = false;
-			
+
 			// Try to convert the String in the width entry field into an Integer
 			try {
 				
@@ -170,29 +169,49 @@ public class AARC {
 			// Conditionals to display proper error messages based on which fields are not valid
 			if(widthIsBad == true && heightIsBad == true) {
 				
-				// Display corresponding error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid width and height.", "Error", JOptionPane.INFORMATION_MESSAGE); 
+				// Display error message with formatted title
+				JOptionPane.showMessageDialog(null, "Please enter a valid width and height. Both must be whole numbers.", "Error", JOptionPane.INFORMATION_MESSAGE); 
 				
 			}
 			else if(widthIsBad == true && heightIsBad == false) { 
 				
-				// Display corresponding error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid width.", "Error", JOptionPane.INFORMATION_MESSAGE);
+				// Display error message with formatted title
+				JOptionPane.showMessageDialog(null, "Please enter a valid width. It must be a whole number.", "Error", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
 			else if(widthIsBad == false && heightIsBad == true) {
 				
-				// Display corresponding error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid height.", "Error", JOptionPane.INFORMATION_MESSAGE);
+				// Display error message with formatted title
+				JOptionPane.showMessageDialog(null, "Please enter a valid height. It must be a whole number", "Error", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
-			// Final conditional: means IF both fields are valid: do this
+			// Final valid integer testing conditional: means IF both fields are valid numbers: do this
 			else {
 				
-				// Set display label to result { pass in user entry Integer derived from String to math methods };
-				resultDisplay.setText("Ratio = " + aspectRatioMath(Integer.valueOf(widthEntry.getText()), Integer.valueOf(heightEntry.getText())));
-				// Formatting to make result label pretty
-				resultDisplay.setFont(new Font("Ratio =", Font.BOLD, 12));
+				// Checks to make sure that "valid" width number is not negative
+				if(Integer.valueOf(widthEntry.getText()) < 0) {
+					
+					// TODO: Refactor this logic to add combined error checker like with integer validation -- currently, width error shows even when both width and height are invalid
+					// Display error message with formatted title
+					JOptionPane.showMessageDialog(null, "A display cannot have a negative width. Please enter a number above 0 into the \"Width\" field.", "Error", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				// Checks to make sure that "valid" height number is not negative
+				else if(Integer.valueOf(heightEntry.getText()) < 0) {
+					
+					// Display error message with formatted title
+					JOptionPane.showMessageDialog(null, "A display cannot have a negative height. Please enter a number above 0 into the \"Height\" field.", "Error", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				// Final negative number conditional: means IF both fields are both valid, positive numbers: do this
+				else {
+					
+					// Set display label to result { pass in user entry Integer derived from String to math methods };
+					resultDisplay.setText("Ratio = " + aspectRatioMath(Integer.valueOf(widthEntry.getText()), Integer.valueOf(heightEntry.getText())));
+					// Formatting to make result label pretty
+					resultDisplay.setFont(new Font("Ratio =", Font.BOLD, 12));
+					
+				}
 				
 			}
 				
