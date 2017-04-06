@@ -17,7 +17,6 @@ TODO:
 
 - Toggle switch for dark mode 
 - Add dark mode in error messages
-- Sort out directory tree (more)
 - AARC.jar //TODO(s)
 
 Screenshots:
