@@ -5,6 +5,7 @@ Should work on any desktop operating system that can run Java 8. Designed and bu
 
 Changelog:
 
+- Version 0.4 Alpha - Fixes crash when calculating aspect ratio with "0" as input for width/height
 - Version 0.3 Alpha - Adds input validation for negative numbers
 - Version 0.2 Alpha - Bugfix: Crash when entering non-integer characters
 - Version 0.1 Alpha - Initial Release
@@ -12,12 +13,11 @@ Changelog:
 Known Bugs:
 
 - UI elements can be misaligned
-- Running "calculate" with "0" in fields crashes the application
 
 TODO:
 
-- Toggle switch for dark mode 
-- Add dark mode in error messages
+- Add a toggle switch for dark mode 
+- Add dark mode style inside of error messages
 - Evaluate whether logic to reject numbers that are too large is needed
 - Come up with a way to auto-merge AARC.jar //TODO(s) into readme
 
