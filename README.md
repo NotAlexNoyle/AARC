@@ -10,7 +10,9 @@ Changelog:
 - Version 0.1 Alpha - Initial Release
 
 Known Bugs:
+
 - UI elements can be misaligned
+- Running "calculate" with "0" in fields crashes the application
 
 TODO:
 
