@@ -185,25 +185,33 @@ public class AARC {
 				JOptionPane.showMessageDialog(null, "Please enter a valid height. It must be a whole number", "Error", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
-			// Final valid integer testing conditional: means IF both fields are valid numbers: do this
+			// Final valid integer testing conditional: means IF both fields are valid integers: do this
 			else {
 				
-				// Checks to make sure that "valid" width number is not negative
-				if(Integer.valueOf(widthEntry.getText()) < 0) {
-					
-					// TODO: Refactor this logic to add combined error checker like with integer validation -- currently, width error shows even when both width and height are invalid
-					// Display error message with formatted title
-					JOptionPane.showMessageDialog(null, "A display cannot have a negative width. Please enter a number above 0 into the \"Width\" field.", "Error", JOptionPane.INFORMATION_MESSAGE);
-					
-				}
-				// Checks to make sure that "valid" height number is not negative
-				else if(Integer.valueOf(heightEntry.getText()) < 0) {
+				// Nested conditionals to display proper error messages based on which fields are negative (therefore, invalid)
+				
+				// If width and height are both negative: do this
+				if(Integer.valueOf(widthEntry.getText()) < 0 && Integer.valueOf(heightEntry.getText()) < 0) {
 					
 					// Display error message with formatted title
-					JOptionPane.showMessageDialog(null, "A display cannot have a negative height. Please enter a number above 0 into the \"Height\" field.", "Error", JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null, "It is not possible to have a negative width and height. Please enter positive values and try again.", "Error", JOptionPane.INFORMATION_MESSAGE); 
 					
 				}
-				// Final negative number conditional: means IF both fields are both valid, positive numbers: do this
+				// If only width is negative: do this
+				else if(Integer.valueOf(widthEntry.getText()) < 0 && Integer.valueOf(heightEntry.getText()) >= 0) { 
+					
+					// Display error message with formatted title
+					JOptionPane.showMessageDialog(null, "It is not possible to have a negative width. Please enter a positive value and try again.", "Error", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				// If only height is negative: do this
+				else if(Integer.valueOf(heightEntry.getText()) < 0 && Integer.valueOf(widthEntry.getText()) >= 0) {
+					
+					// Display error message with formatted title
+					JOptionPane.showMessageDialog(null, "It is not possible to have a negative height. Please enter a positive value and try again", "Error", JOptionPane.INFORMATION_MESSAGE);
+					
+				}
+				// Final negative number conditional --> If both fields are both valid, positive numbers: do this
 				else {
 					
 					// Set display label to result { pass in user entry Integer derived from String to math methods };
