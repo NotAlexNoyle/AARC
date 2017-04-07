@@ -20,6 +20,7 @@ TODO:
 
 - Revise UI - switch to scalable UI layout manager with centering?
 - Add a toggle switch for dark mode
+- Add a visual chart showing the most common narrow --> wide Aspect Ratios
 - Add "about" section
 - Add icon to .jar (wrap executable for various OSes)?
 - Add dark mode style inside of error messages
