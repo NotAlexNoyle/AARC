@@ -34,7 +34,6 @@ public class AARC {
 	public static void main(String[] args) {
 		
 		// Declare panel to hold frame / set layout / set style
-		// TODO: Revise UI - consider switching layout to something which allows more precise alignment, while still allowing the user to modify window attributes --> scale UI elements?
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.DARK_GRAY);
 		
@@ -59,10 +58,6 @@ public class AARC {
 		if(widthEntry.getText().equals("") && heightEntry.getText().equals("")) {
 			resultDisplay.setText("Enter Values...");
 			resultDisplay.setFont(new Font("Enter Values...", Font.ITALIC, 12));
-		}
-		else {
-			// TODO: Insert Github link / make it clickable / make email address clickable to open in mail client or copy if one is not present?
-			JOptionPane.showMessageDialog(null, "This is a bug that shouldn't be happening. Contact the developer at alexnoyle@icloud.com, or open an issue on github", "Fatal Error", JOptionPane.INFORMATION_MESSAGE);
 		}
 		
 		// Formatting for resultDisplay text field to make it appear as a JLabel but still be selectable for copy/paste

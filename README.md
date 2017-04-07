@@ -14,12 +14,16 @@ Known Bugs:
 
 - UI elements can be misaligned
 
+*If you find a bug, please email me alexnoyle@icloud.com, or open an issue on the repo. Suggestions are also appreciated.*
+
 TODO:
 
-- Add a toggle switch for dark mode 
+- Revise UI - switch to scalable UI layout manager with centering?
+- Add a toggle switch for dark mode
+- Add "about" section
+- Add icon to .jar (wrap executable for various OSes)?
 - Add dark mode style inside of error messages
 - Evaluate whether logic to reject numbers that are too large is needed
-- Come up with a way to auto-merge AARC.jar //TODO(s) into readme
 
 Screenshots:
 
