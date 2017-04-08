@@ -165,19 +165,19 @@ public class AARC {
 			if(widthIsBad == true && heightIsBad == true) {
 				
 				// Display error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid width and height. Both must be whole numbers.", "Error", JOptionPane.INFORMATION_MESSAGE); 
+				JOptionPane.showMessageDialog(null, "Please enter a valid width and height. Both must be whole numbers within a reasonable range of display dimensions.", "Error", JOptionPane.INFORMATION_MESSAGE); 
 				
 			}
 			else if(widthIsBad == true && heightIsBad == false) { 
 				
 				// Display error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid width. It must be a whole number.", "Error", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Please enter a valid width. It must be a whole number within a reasonable range of display dimensions.", "Error", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
 			else if(widthIsBad == false && heightIsBad == true) {
 				
 				// Display error message with formatted title
-				JOptionPane.showMessageDialog(null, "Please enter a valid height. It must be a whole number", "Error", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "Please enter a valid height. It must be a whole number within a reasonable range of display dimensions", "Error", JOptionPane.INFORMATION_MESSAGE);
 				
 			}
 			// Final valid integer testing conditional: means IF both fields are valid integers: do this
