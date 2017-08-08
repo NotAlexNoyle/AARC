@@ -5,11 +5,11 @@ Should work on any desktop operating system that can run Java 8. Designed and bu
 
 Changelog:
 
-- Version 0.5 Alpha - Finalized input validation
-- Version 0.4 Alpha - Bugfix: Crash when entering 0 as width/height
-- Version 0.3 Alpha - Adds input validation for negative numbers
-- Version 0.2 Alpha - Bugfix: Crash when entering non-integer characters
-- Version 0.1 Alpha - Initial Release
+- Version 0.05 Alpha - Finalized input validation
+- Version 0.04 Alpha - Bugfix: Crash when entering 0 as width/height
+- Version 0.03 Alpha - Adds input validation for negative numbers
+- Version 0.02 Alpha - Bugfix: Crash when entering non-integer characters
+- Version 0.01 Alpha - Initial Release
 
 Known Bugs:
 
