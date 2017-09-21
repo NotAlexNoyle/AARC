@@ -25,6 +25,7 @@ TODO:
 - Add "about" section
 - Add icon to .jar (wrap executable for various OSes)?
 - Add dark mode style inside of error messages
+- Refactor code
 
 Screenshots:
 
